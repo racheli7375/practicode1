@@ -42,8 +42,8 @@ function App() {
       <section className="main" style={{ display: "block" }}>
         <ul className="todo-list">
           
-          {console.log(todos)}
-        {  todos.map(todo => {
+        
+        { Array.isArray(todos) && todos.map(todo => {
             return (
               <li className={todo.isComplete ? "completed" : ""} key={todo.id}>
                 <div className="view">
