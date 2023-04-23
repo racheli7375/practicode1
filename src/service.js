@@ -1,5 +1,10 @@
 import axios from 'axios';
-axios.defaults.baseURL = 'process.env.REACT_APP_API_URL';
+import dotenv from 'dotenv';
+dotenv.config();
+ axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+
+
+console.log("axios", axios.defaults.baseURL)
 axios.interceptors.response.use(
   function(response){
     return response;
